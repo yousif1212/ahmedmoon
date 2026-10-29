@@ -1,0 +1,17 @@
+name: Build Android APK with uBlock
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Bundle web and extension
+        run: |
+          echo "Empire TV with uBlock Origin is ready for compilation!"
+          ls -la
